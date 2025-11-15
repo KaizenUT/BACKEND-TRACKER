@@ -7,7 +7,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://KaizenUT.github.io'
+  origin: 'https://Kaizenut.github.io'
 })); // Comunicacion entre B y F sin error en el navegador 
 app.use(express.json());
 
