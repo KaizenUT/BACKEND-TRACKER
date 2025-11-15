@@ -7,7 +7,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://kaizenut.github.io'
+  origin: 'https://kaizenut.github.io/FRONTEND-TRACKER/'
 })); // Comunicacion entre B y F sin error en el navegador 
 app.use(express.json());
 
