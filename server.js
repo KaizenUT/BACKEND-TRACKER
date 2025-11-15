@@ -6,7 +6,9 @@ require('dotenv').config();
 const app = express();
 
 // Middlewares
-app.use(cors()); // Comunicacion entre B y F sin error en el navegador 
+app.use(cors({
+  origin: 'https://KaizenUT.github.io'
+})); // Comunicacion entre B y F sin error en el navegador 
 app.use(express.json());
 
 // Conexión a MongoDB
