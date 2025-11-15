@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); // mini - server para organizar los edpoints dami
 const Game = require('../models/Game');
 
 // GET - Obtener todos los juegos

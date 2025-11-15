@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors()); // Comunicacion entre B y F sin error en el navegador 
 app.use(express.json());
 
 // Conexión a MongoDB
@@ -22,12 +22,12 @@ const reviewsRoutes = require('./routes/reviews');
 app.use('/api/game', gamesRoutes);
 app.use('/api/review', reviewsRoutes);
 
-// Ruta de prueba
+// Ruta de prueba pa saber si funciona
 app.get('/', (req, res) => {
   res.json({ mensaje: '🎮 API GameTracker funcionando correctamente' });
 });
 
-// Puerto
+// Puerto y verificación de servidor corriendo
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);

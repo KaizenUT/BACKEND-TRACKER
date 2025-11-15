@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+// Base del proyecto
 const gameSchema = new mongoose.Schema({
   titulo: {
     type: String,

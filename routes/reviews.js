@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); // mini - server para organizar los edpoints dami
 const Review = require('../models/Review');
 const Game = require('../models/Game');
 
@@ -73,7 +73,7 @@ router.get('/:id', async (req, res) => {
 // POST - Crear una nueva reseña
 router.post('/', async (req, res) => {
   try {
-    // Verificar que el juego existe
+    // Verificar que el juego existe por si acaso
     const juegoExiste = await Game.findById(req.body.juegoId);
     if (!juegoExiste) {
       return res.status(404).json({
